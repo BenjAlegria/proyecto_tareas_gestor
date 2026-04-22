@@ -21,8 +21,8 @@ proyecto_tareas_gestor/
 ```
 
 ## Tecnologías
-- HTML5
-- CSS3
+- HTML
+- CSS
 - JavaScript
 
 ## Funcionalidades
