@@ -1,0 +1,284 @@
+/* ===== VARIABLES CSS ===== */
+:root {
+    /* Colores principales */
+    --color-primario: #2563eb;
+    --color-secundario: #7c3aed;
+    --color-terciario: #10b981;
+
+    /* Colores de estado */
+    --color-pendiente: #3b82f6;
+    --color-progreso: #f59e0b;
+    --color-completado: #10b981;
+
+    /* Tipografía */
+    --fuente-principal: 'Segoe UI', system-ui, sans-serif;
+    --tamano-base: 16px;
+
+    /* Espaciado */
+    --espacio-xs: 0.5rem;
+    --espacio-sm: 1rem;
+    --espacio-md: 1.5rem;
+    --espacio-lg: 2rem;
+}
+
+/* ===== ESTILOS GENERALES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    font-size: var(--tamano-base);
+    background-color: var(--color-primario);
+    color: #333;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: var(--color-terciario);
+    color: var(--color-primario);
+    padding: var(--espacio-sm) var(--espacio-lg);
+}
+
+.header-contenido {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: var(--espacio-sm);
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+header h1 {
+    flex: 1;
+}
+
+nav {
+    display: flex;
+    gap: var(--espacio-sm);
+}
+
+nav a {
+    color: var(--color-secundario);
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    border: 1px solid var(--color-secundario);
+}
+
+nav a:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+}
+
+/* ===== MAIN ===== */
+main {
+    max-width: 1100px;
+    margin: var(--espacio-lg) auto;
+    padding: 0 var(--espacio-sm);
+}
+
+/* ===== FORMULARIO ===== */
+#formulario {
+    background-color: var(--color-terciario);
+    padding: var(--espacio-md);
+    border-radius: 10px;
+    margin-bottom: var(--espacio-lg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#formulario h2 {
+    margin-bottom: var(--espacio-sm);
+    color: var(--color-secundario);
+    text-decoration: overline;
+    text-align: center;
+}
+
+#form-tarea {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-xs);
+    max-width: 1100px;
+    color: var(--color-primario);
+}
+
+#form-tarea label {
+    font-weight: bold;
+    margin-top: var(--espacio-xs);
+}
+
+#form-tarea textarea,
+#form-tarea select,
+#form-tarea input[type="date"] {
+    padding: 0.6rem;
+    border: 1px solid var(--color-secundario);
+    border-radius: 10px;
+    font-family: var(--fuente-principal);
+    font-size: 0.95rem;
+    color: var(--color-terciario);
+    background-color: var(--color-secundario);
+}
+
+#form-tarea textarea::placeholder {
+    color: var(--color-terciario);
+}
+
+#form-tarea textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+#form-tarea textarea:focus,
+#form-tarea select:focus,
+#form-tarea input[type="date"]:focus {
+    outline: none;
+    border-color: var(--color-secundario);
+}
+
+#form-tarea button[type="submit"] {
+    margin-top: var(--espacio-xs);
+    padding: 0.7rem;
+    background-color: var(--color-primario) ;
+    color: var(--color-terciario);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: var(--fuente-principal);
+}
+
+#form-tarea button[type="submit"]:hover {
+    background-color: var(--color-secundario);
+}
+
+/* ===== TABLERO KANBAN ===== */
+#tablero h2 {
+    margin-bottom: var(--espacio-sm);
+    color: var(--color-terciario);
+    text-decoration: overline;
+    text-align: center;
+}
+
+.columnas {
+    display: flex;
+    gap: var(--espacio-sm);
+}
+
+.columna {
+    flex: 1;
+    background-color: var(--color-secundario);
+    border-radius: 10px;
+    padding: var(--espacio-sm);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    min-height: 300px;
+}
+
+.columna h3 {
+    font-size: 1rem;
+    margin-bottom: var(--espacio-sm);
+    padding-bottom: var(--espacio-xs);
+    border-bottom: 3px solid var(--color-primario);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Colores de encabezado por estado */
+#pendientes h3  { border-color: var(--color-pendiente);  color: var(--color-pendiente); }
+#en-progreso h3 { border-color: var(--color-progreso);   color: var(--color-progreso); }
+#completadas h3 { border-color: var(--color-completado); color: var(--color-completado); }
+
+.contador {
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.tareas-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-xs);
+}
+
+/* ===== TARJETAS DE TAREAS ===== */
+.tarjeta {
+    background-color: var(--color-terciario);
+    border: 1px solid var(--color-terciario);
+    border-radius: 6px;
+    padding: var(--espacio-xs) var(--espacio-sm);
+}
+
+.tarjeta p {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+
+.prioridad.alta  { background-color: var(--color-secundario); }
+.prioridad.media { background-color: var(--color-progreso); }
+.prioridad.baja  { background-color: var(--color-pendiente) }
+
+.tarjeta .fecha {
+    font-size: 0.78rem;
+    color: var(--color-primario);
+    margin-bottom: 0.5rem;
+}
+
+.tarjeta-botones {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.tarjeta-botones button {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--fuente-principal);
+}
+
+.tarjeta-botones button:hover {
+    opacity: 0.85;
+}
+
+.btn-progreso  { background-color: var(--color-progreso);   color: var(--color-primario); }
+.btn-completar { background-color: var(--color-primario); color: var(--color-terciario); }
+.btn-eliminar  { background-color: var(--color-secundario); color: var(--color-terciario); }
+.btn-reabrir   { background-color: var(--color-primario); color: var(--color-terciario);}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: var(--color-completado);
+    color: var(--color-primario);
+    text-align: center;
+    padding: var(--espacio-md);
+    margin-top: var(--espacio-lg);
+}
+
+footer p {
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+}
+
+footer a {
+    color: var(--color-secundario);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+

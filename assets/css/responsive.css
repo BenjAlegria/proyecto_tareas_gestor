@@ -1,0 +1,56 @@
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Breakpoint 1: Tablet (máximo 900px) */
+@media (max-width: 900px) {
+    .columnas {
+        flex-direction: column;
+    }
+
+    .columna {
+        min-height: auto;
+    }
+}
+
+/* Breakpoint 2: Celular (máximo 600px) */
+@media (max-width: 600px) {
+    .header-contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    #form-tarea {
+        max-width: 100%;
+    }
+
+    main {
+        padding: 0 0.5rem;
+    }
+}
+
+/* Breakpoint 3: Celular pequeño (máximo 400px) */
+@media (max-width: 400px) {
+    header h1 {
+        font-size: 1rem;
+    }
+
+    .tarjeta-botones {
+        flex-direction: column;
+    }
+
+    .tarjeta-botones button {
+        width: 100%;
+    }
+
+    nav a {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.5rem;
+    }
+}
