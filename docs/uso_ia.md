@@ -29,7 +29,7 @@ Tuve que cambiar los nombres de los id porque la evaluacion pedia unos especific
 > "necesito que al enviar el formulario se agregue la tarea en la columna pendientes q cada tarjeta tenga botones para cambiar de estado y uno para eliminarla y que los numeros de cada columna se actualicen solos"
 
 **Lo que me respondió:**
-Me dio el codigo con un array para guardar las tareas, una funcion para mostrarlas en el tablero y funciones para cambiar el estado y eliminar. Usaba metodos como `filter` y `forEach` que yo no entendia bien `por lo que tambien me ayude con la ia para preguntarle cosas que no sabia y que me explicara`.
+Me dio el codigo con un array para guardar las tareas, una funcion para mostrarlas en el tablero y funciones para cambiar el estado y eliminar. Usaba metodos como `filter` y `forEach` que yo no entendia bien `por lo que tambien me ayude con la IA para preguntarle cosas que no sabia y que me explicara`.
 
 **Qué cambié yo:**
 Cambie los metodos que no entendia por `for`. Tambien cambie todos los `var` por `let` ya que no entendia la diferencia de var y let por lo que opte por usar let ya que es lo que hemos usado mas en clases y actividades. Agregue las validaciones con `alert()` para cada campo del formulario porque la IA los habia puesto todos juntos en una sola condicion y asi era mas claro.
