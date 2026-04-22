@@ -34,9 +34,9 @@ proyecto_tareas_gestor/
 - Diseño responsive
 
 ## Cómo usar
-Clonar el repositorio en tu computador.
-Abrir la carpeta con Visual Studio Code.
-Abrir el archivo `index.html` en el navegador o con live server.
+- Clonar el repositorio en tu computador.
+- Abrir la carpeta con Visual Studio Code.
+- Abrir el archivo `index.html` en el navegador o con live server.
 
 ## Contacto
 Estudiante: Benjamin Alegria.
